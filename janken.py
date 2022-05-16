@@ -17,7 +17,7 @@ def play_round():
         print("No random number")
     elif(cpu_choice > 2):
         print("Number too big")
-    get_player_choice()
+    playerChoice = get_player_choice()
     print(cpu_choice)
     
     
@@ -31,10 +31,10 @@ def get_player_choice():
         except ValueError:
             print("Invalid Input, try again!")
             playerChoice = -1
-        except (playerChoice < 2):
-            print("Number too large, try again!")
+        if playerChoice > 2:
+            print("Number too large, try again! The number you chose was:" + str(playerChoice))
             playerChoice = -1
-        
+    return playerChoice
 
 def main():
     start_game()
