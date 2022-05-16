@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
-from InputControllerABC import InputControllerABC
-from OutputControllerABC import OutputControllerABC
+from jankenpy.io.InputControllerABC import InputControllerABC
+from jankenpy.io.OutputControllerABC import OutputControllerABC
 
 
 @dataclass

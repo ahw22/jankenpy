@@ -1,11 +1,12 @@
 from abc import ABC, abstractmethod
+from typing import Callable, Optional
 
 
 class InputControllerABC(ABC):
     @abstractmethod
-    def get_player_name(self) -> str:
-        """Method that asks a players name."""
+    def get_str(self, validator: Optional[Callable] = None) -> str:
+        """Method that gets a string."""
 
     @abstractmethod
-    def get_player_choice(self) -> int:
-        """Get the choice of move the player wants to make."""
+    def get_int(self, validator: Optional[Callable] = None) -> int:
+        """Method that gets an int."""
