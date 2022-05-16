@@ -60,11 +60,11 @@ def who_won(playerChoice, cpuChoice, playerName):
     return result
         
 def main():
-    playerName = start_game()
     rounds = 3
     roundsPlayed = 0
     player1Score = 0
     player2Score = 0
+    playerName = start_game()
     while(roundsPlayed < rounds):
         print("\n\n\nRound " + str(roundsPlayed + 1))
         winner = play_round(playerName)
