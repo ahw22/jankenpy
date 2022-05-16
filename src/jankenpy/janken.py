@@ -18,13 +18,13 @@ def play_round(playerName):
     Returns:
         int: 0 = Draw, 1 = Player 1 won, 2 = CPU(Player 2) won
     """
-    cpuChoice = random.randrange(0, 3) # TODO
+    cpuChoice = random.randrange(0, 3)  # TODO
     playerChoice = get_player_choice()
 
     # check choices
-    if cpuChoice not in range(3): # TODO
+    if cpuChoice not in range(3):  # TODO
         raise ValueError(f"CPU chose an invalid number! Got: {cpuChoice}")
-    if playerChoice not in range(3): # TODO
+    if playerChoice not in range(3):  # TODO
         raise ValueError(f"{playerName} chose an invalid number! Got: {playerChoice}")
 
     result = who_won(playerChoice, cpuChoice, playerName)
@@ -38,7 +38,7 @@ def get_player_choice():
         print("Rock = 0, Paper = 1, Scissors = 2")
         try:
             playerChoice = int(input("To pick a card press a number from 0 to 2\n"))
-            if playerChoice not in range(3): # TODO
+            if playerChoice not in range(3):  # TODO
                 print(
                     f"Number too large, try again! The number you chose was: {playerChoice}"
                 )
